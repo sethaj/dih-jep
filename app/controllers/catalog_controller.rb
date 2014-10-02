@@ -13,13 +13,13 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.default_solr_params = {
-      :qf => 'jeptitle_tesim jepauthor_tesim',
+      :qf => 'title_tesim author_tesim',
       :qt => 'search',
       :rows => 10
     }
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'jeptitle_tesim'
+    config.index.title_field = 'title_tesim'
     config.index.display_type_field = 'has_model_ssim'
 
 
