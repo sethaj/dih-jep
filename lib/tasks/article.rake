@@ -23,4 +23,12 @@ namespace :article do
       a.save!
     end
   end
+
+  desc "remove objects from solr and fedora"
+  task :destroy => :environment do
+    Article.all.each do |a|
+      a.destroy
+    end
+  end
+
 end
